@@ -14,21 +14,7 @@
     <link rel="stylesheet" href="./assets/fonts/Orbitron-VariableFont_wght.ttf">
     <link rel="stylesheet" href="./assets/fonts/Roboto-Regular.ttf">
     <link rel="stylesheet" href="https://colorzilla.com/gradient-editor/#ff9f5b+0,efefef+44,efefef+53,ff9f5b+100">
-    <script>
-       $('#vid').on('ended', function(){this.playedThrough = true;});
-
-$(window).scroll(function(){
-    var myVideo = document.getElementById("vid");
-
-    if($(window).scrollTop() > 300 && $(window).scrollTop() < 975){
-       // only if we didn't reached the end yet
-       if(!myVideo.playedThrough)
-          myVideo.play();
-    }else{
-       myVideo.pause();
-    }
- })
-    </script>
+    
     <style>
     #container-main {
         width: 64%;
