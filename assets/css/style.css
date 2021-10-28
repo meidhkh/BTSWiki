@@ -133,9 +133,30 @@ body {
     font-size: 8px;
 }
 
-#footer {
-
+#footer{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 40px;
+    width: 100%;
+    background:white;
+    line-height: 40px;
 }
+#footer i{
+    margin-left: 15px ;
+}
+#footer .rightfooter{
+    display: inline;
+    float: right;
+    padding-right: 15px;
+}
+#footer .rightfooter a{
+    color: black;
+    margin-left: 10px;
+}
+#footer .rightfooter a i{
+    font-size: 30px;
+    line-height: 40px;
+}
+
 
 .classfont2 {
     background-color:#ff6b01; 
