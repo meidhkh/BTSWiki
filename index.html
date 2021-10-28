@@ -14,7 +14,21 @@
     <link rel="stylesheet" href="./assets/fonts/Orbitron-VariableFont_wght.ttf">
     <link rel="stylesheet" href="./assets/fonts/Roboto-Regular.ttf">
     <link rel="stylesheet" href="https://colorzilla.com/gradient-editor/#ff9f5b+0,efefef+44,efefef+53,ff9f5b+100">
-    
+    <script>
+       $('#vid').on('ended', function(){this.playedThrough = true;});
+
+$(window).scroll(function(){
+    var myVideo = document.getElementById("vid");
+
+    if($(window).scrollTop() > 300 && $(window).scrollTop() < 975){
+       // only if we didn't reached the end yet
+       if(!myVideo.playedThrough)
+          myVideo.play();
+    }else{
+       myVideo.pause();
+    }
+ })
+    </script>
     <style>
     #container-main {
         width: 64%;
@@ -29,6 +43,8 @@
         height: 100px;
     } 
     .slide-navigation{
+        z-index: 888;
+        position: relative;
         justify-content: center;
         align-items: center;
         transform: translateY(0px);
@@ -52,6 +68,7 @@
     </style>
 </head>
 <body>
+    
     <div id="main">
         <div id="header">
             <!-- Begin Nav -->
@@ -131,7 +148,7 @@
                     CHÀO MỪNG BẠN ĐẾN VỚI BTS VI-WIKI
                 </div>
                 <!-- <img style="width: 100%" src="./assets/img/slider/Butter_Remix.png" alt="Butter"> -->
-                <video id="video-slide" style="width: 100%;" src="./assets/videos/dna.mp4" autoplay loop></video>
+                <video id="video-slide" controls style="width: 100%;" src="./assets/videos/dna.mp4" loop></video>
                 <div class="slide-navigation">
                     <div class="nav-btn">
                         <button onclick="document.getElementById('video-slide').src='./assets/videos/dna.mp4'"></button>
@@ -153,6 +170,7 @@
 
                     </div>
                 </div>
+                
             </br>
             <center>
                 Chào mừng bạn đến với
